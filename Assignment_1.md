@@ -58,7 +58,7 @@ ggplot(Q2, aes(interval, steps)) + geom_line() + labs(title = "Average Daily Act
 Int_max <- Q2[which.max(Q2$steps),]$interval
 ```
 
-The interval with the highest average steps is **835**
+The 5-minute interval with the highest average steps is **835**
 
 ##Imputing missing values
 
@@ -68,6 +68,8 @@ data_mv_NA <- nrow(data_mv[is.na(data_mv$steps),])
 ```
 
 There are **2304** missing values for steps in the data set.
+
+To impute the missing values, the mean value for the particular 5-minute interval is being calculated.
 
 
 ```r
